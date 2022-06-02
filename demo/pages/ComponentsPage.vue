@@ -1,5 +1,7 @@
 <template>
   <Page heading="Components">
+    <DataDisplaySection />
+
     <PopOverSection />
 
     <TypographySection />
@@ -47,6 +49,7 @@
   import BreadCrumbsSection from '../sections/BreadCrumbsSection.vue'
   import ButtonsSection from '../sections/ButtonsSection.vue'
   import CodeSection from '../sections/CodeSection.vue'
+  import DataDisplaySection from '../sections/DataDisplaySection.vue'
   import DividerSection from '../sections/DividerSection.vue'
   import EmptyStateSection from '../sections/EmptyStateSection.vue'
   import FormsSection from '../sections/FormsSection.vue'
