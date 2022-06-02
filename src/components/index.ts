@@ -7,6 +7,7 @@ import { default as PCombobox } from './Combobox'
 import { default as PContextDivider } from './ContextDivider'
 import { default as PContextNavItem } from './ContextNavItem'
 import { default as PContextSidebar } from './ContextSidebar'
+import { default as PDataDisplay } from './DataDisplay'
 import { default as PDateInput } from './DateInput'
 import { default as PDatePicker } from './DatePicker'
 import { default as PDivider } from './Divider'
@@ -55,6 +56,7 @@ export {
   PContextDivider,
   PContextNavItem,
   PContextSidebar,
+  PDataDisplay,
   PDateInput,
   PDatePicker,
   PDivider,
@@ -110,6 +112,7 @@ export const installs = [
   PContextDivider.install,
   PContextNavItem.install,
   PContextSidebar.install,
+  PDataDisplay.install,
   PDateInput.install,
   PDatePicker.install,
   PDivider.install,
@@ -165,6 +168,7 @@ declare module '@vue/runtime-core' {
     PCombobox: typeof PCombobox,
     PContextNavItem: typeof PContextNavItem,
     PContextSidebar: typeof PContextSidebar,
+    PDataDisplay: typeof PDataDisplay,
     PDateInput: typeof PDateInput,
     PDatePicker: typeof PDatePicker,
     PDivider: typeof PDivider,
