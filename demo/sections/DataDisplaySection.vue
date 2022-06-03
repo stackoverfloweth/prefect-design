@@ -22,12 +22,31 @@
         </template>
       </p-data-display>
     </SubSection>
+
+    <SubSection heading="Form Display">
+      <p-button>Edit</p-button>
+
+      <div class="temp">
+        <p-form-display>
+          <p-data-display label="Email" :value="formValue1" />
+        </p-form-display>
+
+        <p-form>
+          <p-label label="Email">
+            <p-text-input v-model="formValue1" />
+          </p-label>
+        </p-form>
+      </div>
+    </SubSection>
   </Section>
 </template>
 
 <script setup lang="ts">
+  import { ref } from 'vue'
   import Section from '../components/Section.vue'
   import SubSection from '../components/SubSection.vue'
+
+  const formValue1 = ref('marvin@prefect.io')
 </script>
 
 <style>
@@ -35,5 +54,10 @@
   background-image: linear-gradient(to left, #E3331C, #EA9500, #4C9C23, #00AAE6, #995AA0);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.temp {
+  @apply
+  flex
 }
 </style>

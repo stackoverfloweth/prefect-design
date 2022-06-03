@@ -7,7 +7,7 @@ import { default as PCombobox } from './Combobox'
 import { default as PContextDivider } from './ContextDivider'
 import { default as PContextNavItem } from './ContextNavItem'
 import { default as PContextSidebar } from './ContextSidebar'
-import { default as PDataDisplay } from './DataDisplay'
+import { PDataDisplay, PFormDisplay } from './DataDisplay'
 import { default as PDateInput } from './DateInput'
 import { default as PDatePicker } from './DatePicker'
 import { default as PDivider } from './Divider'
@@ -63,6 +63,7 @@ export {
   PEmptyResults,
   PEmptyState,
   PForm,
+  PFormDisplay,
   PGlobalNavItem,
   PGlobalSidebar,
   PIcon,
@@ -119,6 +120,7 @@ export const installs = [
   PEmptyResults.install,
   PEmptyState.install,
   PForm.install,
+  PFormDisplay.install,
   PGlobalNavItem.install,
   PGlobalSidebar.install,
   PIcon.install,
@@ -175,6 +177,7 @@ declare module '@vue/runtime-core' {
     PEmptyResults: typeof PEmptyResults,
     PEmptyState: typeof PEmptyState,
     PForm: typeof PForm,
+    PFormDisplay: typeof PFormDisplay,
     PGlobalNavItem: typeof PGlobalNavItem,
     PGlobalSidebar: typeof PGlobalSidebar,
     PIcon: typeof PIcon,

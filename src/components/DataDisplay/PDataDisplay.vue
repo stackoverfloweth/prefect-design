@@ -35,10 +35,15 @@
 
 <style>
 .p-data-display {
-  @apply
-  text-xs
-  leading-4
-  font-normal
+ @apply
+  w-full
+  text-sm
+  font-medium
+  text-gray-700
+  flex
+  flex-col
+  gap-y-1
+  leading-6
 }
 
 .p-data-display__label {
