@@ -24,7 +24,8 @@
     "lint:fix": "eslint src --fix",
     "changelog": "auto-changelog --package --commit-limit 0",
     "changelog:commit": "npm run changelog && git add -A && git commit -m 'Update CHANGELOG.md'",
-    "release": "release-it"
+    "release": "release-it",
+    "release:dry-run": "release-it --dry-run"
   },
   "main": "./dist/prefect-design.umd.js",
   "module": "./dist/prefect-design.es.js",
