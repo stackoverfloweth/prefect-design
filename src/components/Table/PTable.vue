@@ -26,7 +26,7 @@
             <PTableRow :class="getRowClasses(row, rowIndex)">
               <template v-if="selected">
                 <PTableData class="p-table__checkbox-cell">
-                  <p-checkbox v-model="internalSelectedRows" :value="row" :disabled="row.disabled" />
+                  <p-checkbox v-model="internalSelected" :value="row" :disabled="row.disabled" />
                 </PTableData>
               </template>
 
@@ -82,24 +82,24 @@
   const slots = useSlots()
 
   const emit = defineEmits<{
-    (event: 'update:selectedRows', value: TableData[]): void,
+    (event: 'update:selected', value: TableData[]): void,
   }>()
 
-  const internalSelectedRows = computed({
+  const internalSelected = computed({
     get() {
       return props.selected ?? []
     },
     set(value: TableData[]) {
-      emit('update:selectedRows', value)
+      emit('update:selected', value)
     },
   })
 
   const allSelected = computed({
     get() {
-      return internalSelectedRows.value.length === selectableRows.value.length
+      return internalSelected.value.length === selectableRows.value.length
     },
     set(value: boolean) {
-      internalSelectedRows.value = value ? selectableRows.value : []
+      internalSelected.value = value ? selectableRows.value : []
     },
   })
 
