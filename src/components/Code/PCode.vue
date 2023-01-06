@@ -24,7 +24,7 @@
 
 <style>
 .p-code-container { @apply
-  bg-slate-700
+  bg-slate-800
   text-slate-50
   rounded
   px-1
