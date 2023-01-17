@@ -91,6 +91,7 @@
 .p-select-options { @apply
   my-1
   bg-background
+  dark:bg-background-500
   overflow-hidden
   rounded-md
   shadow-lg
