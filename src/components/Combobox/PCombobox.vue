@@ -4,8 +4,8 @@
     :options="filteredSelectOptions"
     :empty-message="emptyMessage"
     @update:model-value="resetTypedValue"
-    @close="resetTypedValue"
-    @open="focusOnTextInput"
+    @close="handleClose"
+    @open="handleOpen"
     @keydown="handleComboboxKeydown"
   >
     <template #default="{ value, option }">
@@ -79,6 +79,7 @@
   const emit = defineEmits<{
     (event: 'update:modelValue', value: SelectModelValue | SelectModelValue[]): void,
     (event: 'update:search', value: string | null): void,
+    (event: 'open' | 'close'): void,
   }>()
 
   const modelValue = computed({
@@ -207,6 +208,16 @@
 
   function focusOnTextInput(): void {
     nextTick(() => textInput.value?.focus())
+  }
+
+  function handleOpen(): void {
+    focusOnTextInput()
+    emit('open')
+  }
+
+  function handleClose(): void {
+    resetTypedValue()
+    emit('close')
   }
 
   function handleTextInputKeydown(event: KeyboardEvent): void {
