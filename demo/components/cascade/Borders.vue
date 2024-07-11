@@ -22,7 +22,7 @@
 </template>
 
 <script setup lang="ts">
-  import { useSubscriptionWithDependencies } from '@prefecthq/vue-compositions'
+  import { useSubscriptionWithDependencies } from '@stackoverfloweth/vue-compositions'
   import { computed, ref } from 'vue'
 
   const search = ref()

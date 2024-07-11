@@ -1,6 +1,4 @@
-import { RouteLocationRaw } from 'vue-router'
-
 export type ContextAccordionChildItem = {
-  to: RouteLocationRaw,
+  to: unknown,
   title?: string,
 }

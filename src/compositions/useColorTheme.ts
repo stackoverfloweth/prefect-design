@@ -1,4 +1,4 @@
-import { useLocalStorage } from '@prefecthq/vue-compositions'
+import { useLocalStorage } from '@stackoverfloweth/vue-compositions'
 import { ref, Ref } from 'vue'
 import { globalExists } from '@/utilities/id'
 

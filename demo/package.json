@@ -4,6 +4,7 @@
   "description": "",
   "devDependencies": {
     "@types/prismjs": "^1.26.0",
-    "prismjs": "^1.29.0"
+    "prismjs": "^1.29.0",
+    "vue-router": "^4.4.0"
   }
 }

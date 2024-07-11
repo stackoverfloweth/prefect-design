@@ -20,7 +20,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { useMousePosition, useKeyDown } from '@prefecthq/vue-compositions'
+  import { useMousePosition, useKeyDown } from '@stackoverfloweth/vue-compositions'
   import { computed, ref } from 'vue'
   import POverflowMenu from '@/components/OverflowMenu/POverflowMenu.vue'
   import PPopOver from '@/components/PopOver/PPopOver.vue'

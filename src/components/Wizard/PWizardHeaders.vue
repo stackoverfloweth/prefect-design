@@ -23,7 +23,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { useChildrenAreWrapped } from '@prefecthq/vue-compositions'
+  import { useChildrenAreWrapped } from '@stackoverfloweth/vue-compositions'
   import { computed, ref } from 'vue'
   import PWizardStepHeader from '@/components/Wizard/PWizardStepHeader.vue'
   import { useWizard } from '@/compositions'

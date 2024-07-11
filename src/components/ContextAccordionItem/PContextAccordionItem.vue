@@ -19,13 +19,14 @@
       <div v-if="open" class="p-context-accordion-item__contents">
         <slot />
         <template v-for="(item, index) in children" :key="index">
-          <router-link
+          <component
+            :is="component"
             :to="item.to"
             class="p-context-accordion-item__content-child"
             active-class="p-context-accordion-item__content-child--active"
           >
             {{ item.title }}
-          </router-link>
+          </component>
         </template>
       </div>
     </PAutoHeightTransition>
@@ -33,36 +34,25 @@
 </template>
 
 <script setup lang="ts">
-  import { ref, computed, useSlots, watch } from 'vue'
-  import { useRoute } from 'vue-router'
+  import { ref, computed, useSlots, watch, toRefs } from 'vue'
   import PAutoHeightTransition from '@/components/AutoHeightTransition/PAutoHeightTransition.vue'
   import PIcon from '@/components/Icon/PIcon.vue'
   import { ContextAccordionChildItem } from '@/types/contextAccordionChildItem'
   import { Icon } from '@/types/icon'
-  import { getRouteName } from '@/utilities/router'
 
   const props = defineProps<{
     title?: string,
     icon?: Icon,
     children?: ContextAccordionChildItem[],
+    childrenContainRoute?: boolean,
   }>()
 
-  const route = useRoute()
   const slots = useSlots()
   const open = ref(false)
+  const { childrenContainRoute } = toRefs(props)
+  const component = ref('router-link')
 
   const hasChildren = computed(() => !!slots.default || props.children?.length)
-
-  const childrenContainRoute = computed(() => {
-    if (!props.children) {
-      return false
-    }
-
-    const matchedPaths = route.matched.map(({ name }) => name)
-    const childPaths = props.children.map(({ to }) => getRouteName(to))
-
-    return childPaths.some(path => path && matchedPaths.includes(path))
-  })
 
   const classes = computed(() => ({
     header: {

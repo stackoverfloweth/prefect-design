@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { useIntersectionObserver } from '@prefecthq/vue-compositions'
+  import { useIntersectionObserver } from '@stackoverfloweth/vue-compositions'
   import { setYear } from 'date-fns'
   import { computed, ref, nextTick, onMounted } from 'vue'
   import ScrollingPicker from '@/components/Calendar/ScrollingPicker.vue'

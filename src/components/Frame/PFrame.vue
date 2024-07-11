@@ -22,7 +22,7 @@
 </script>
 
 <script lang="ts" setup>
-  import { useElementRect } from '@prefecthq/vue-compositions'
+  import { useElementRect } from '@stackoverfloweth/vue-compositions'
   import { ref, watch, computed } from 'vue'
 
   const props = defineProps<{

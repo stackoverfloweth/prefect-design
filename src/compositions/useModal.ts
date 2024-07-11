@@ -1,4 +1,4 @@
-import { useBoolean } from '@prefecthq/vue-compositions'
+import { useBoolean } from '@stackoverfloweth/vue-compositions'
 import { computed, MaybeRef, Ref } from 'vue'
 
 type UseModal = {

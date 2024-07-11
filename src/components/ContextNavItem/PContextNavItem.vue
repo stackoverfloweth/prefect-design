@@ -16,12 +16,11 @@
 
 <script setup lang="ts">
   import { computed } from 'vue'
-  import { RouteLocationRaw } from 'vue-router'
   import PIcon from '@/components/Icon/PIcon.vue'
   import { Icon } from '@/types/icon'
 
   const props = defineProps<{
-    to?: string | RouteLocationRaw,
+    to?: unknown,
     title?: string,
     icon?: Icon,
   }>()

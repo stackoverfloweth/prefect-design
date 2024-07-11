@@ -17,7 +17,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { useKeyDown } from '@prefecthq/vue-compositions'
+  import { useKeyDown } from '@stackoverfloweth/vue-compositions'
   import { computed, ref } from 'vue'
   import PPopOver from '@/components/PopOver/PPopOver.vue'
   import { keys } from '@/types/keyEvent'

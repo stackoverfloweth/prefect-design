@@ -48,7 +48,7 @@
   import { CascadePanel, useCascadePanels, useMostVisiblePositionStyles } from '@/compositions'
   import { keys } from '@/types'
   import { positions } from '@/utilities'
-  import { useKeyDown } from '@prefecthq/vue-compositions'
+  import { useKeyDown } from '@stackoverfloweth/vue-compositions'
   import { computed, ref, watch } from 'vue'
   import Borders from '@/demo/components/cascade/Borders.vue'
   import Continents from '@/demo/components/cascade/Continents.vue'

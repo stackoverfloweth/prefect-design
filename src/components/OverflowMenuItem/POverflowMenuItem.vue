@@ -19,33 +19,24 @@
 
 <script lang="ts" setup>
   import { computed } from 'vue'
-  import { RouteLocationRaw } from 'vue-router'
   import PIcon from '@/components/Icon/PIcon.vue'
   import { Icon } from '@/types/icon'
-  import { isRouteExternal } from '@/utilities/router'
 
   const props = defineProps<{
     label?: string,
     icon?: Icon,
-    to?: RouteLocationRaw,
+    to?: unknown,
   }>()
 
   const component = computed(() => {
     if (props.to) {
-      return isRouteExternal(props.to) ? 'a' : 'router-link'
+      return 'router-link'
     }
 
     return 'button'
   })
 
   const componentProps = computed(() => {
-    if (component.value === 'a') {
-      return {
-        role: 'button',
-        href: props.to,
-      }
-    }
-
     if (component.value === 'button') {
       return {
         type: 'button',

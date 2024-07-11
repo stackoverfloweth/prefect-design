@@ -23,7 +23,7 @@
 <script lang="ts" setup>
   import { useColorTheme } from '@/compositions'
   import { toPixels } from '@/utilities'
-  import { useGlobalEventListener, useMousePosition } from '@prefecthq/vue-compositions'
+  import { useGlobalEventListener, useMousePosition } from '@stackoverfloweth/vue-compositions'
   import { computed, ref, nextTick } from 'vue'
   import ResizeIcon from '@/demo/components/ResizeIcon.svg'
 

@@ -47,7 +47,7 @@
 </script>
 
 <script lang="ts" setup>
-  import { useElementRect } from '@prefecthq/vue-compositions'
+  import { useElementRect } from '@stackoverfloweth/vue-compositions'
   import { computed, ref } from 'vue'
   import PPopOver from '@/components/PopOver/PPopOver.vue'
   import PSelectOptions from '@/components/Select/PSelectOptions.vue'

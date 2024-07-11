@@ -25,11 +25,9 @@
 <script lang="ts" setup>
   import { cva, type VariantProps } from 'class-variance-authority'
   import { computed, ref } from 'vue'
-  import { RouteLocationRaw } from 'vue-router'
   import PIcon from '@/components/Icon/PIcon.vue'
   import PLoadingIcon from '@/components/LoadingIcon/PLoadingIcon.vue'
   import { Icon } from '@/types'
-  import { isRouteExternal } from '@/utilities/router'
 
   const button = cva(
     'p-button',
@@ -77,7 +75,7 @@
     icon?: Icon,
     iconAppend?: Icon,
     dangerous?: boolean,
-    to?: RouteLocationRaw,
+    to?: unknown,
     small?: boolean,
     disabled?: boolean,
     loading?: boolean,
@@ -91,20 +89,13 @@
 
   const component = computed(() => {
     if (props.to) {
-      return isRouteExternal(props.to) ? 'a' : 'router-link'
+      return 'router-link'
     }
 
     return 'button'
   })
 
   const componentProps = computed(() => {
-    if (component.value === 'a') {
-      return {
-        role: 'button',
-        href: props.to,
-      }
-    }
-
     if (component.value === 'button') {
       return {
         type: 'button',

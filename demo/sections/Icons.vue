@@ -53,7 +53,7 @@
   import * as prefectIcons from '@/components/Icon/icons'
   import { HeroIcon, PrefectIcon } from '@/types'
   import * as heroIcons from '@heroicons/vue/24/outline'
-  import { useDebouncedRef } from '@prefecthq/vue-compositions'
+  import { useDebouncedRef } from '@stackoverfloweth/vue-compositions'
   import { ref, computed } from 'vue'
   import CodeBlock from '@/demo/components/CodeBlock.vue'
   import ComponentPage from '@/demo/components/ComponentPage.vue'

@@ -46,7 +46,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { useComputedStyle, useElementRect } from '@prefecthq/vue-compositions'
+  import { useComputedStyle, useElementRect } from '@stackoverfloweth/vue-compositions'
   import { computed, ref } from 'vue'
   import { PCode, PCodeHighlight, PLineNumbers } from '@/components'
   import { useScrollLinking } from '@/compositions'

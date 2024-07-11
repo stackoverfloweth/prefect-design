@@ -50,7 +50,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { UseVisibilityObserverOptions, useKeyDown, useVisibilityObserver } from '@prefecthq/vue-compositions'
+  import { UseVisibilityObserverOptions, useKeyDown, useVisibilityObserver } from '@stackoverfloweth/vue-compositions'
   import { computed, ref } from 'vue'
   import PSelectOption from '@/components/SelectOption/PSelectOption.vue'
   import PSelectOptionGroup from '@/components/SelectOptionGroup/PSelectOptionGroup.vue'

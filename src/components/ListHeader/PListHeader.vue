@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { UsePositionStickyObserverOptions, usePositionStickyObserver } from '@prefecthq/vue-compositions'
+  import { UsePositionStickyObserverOptions, usePositionStickyObserver } from '@stackoverfloweth/vue-compositions'
   import { computed, ref, useSlots } from 'vue'
   import { useOffsetStickyRootMargin } from '@/compositions'
   import { Getter } from '@/types'

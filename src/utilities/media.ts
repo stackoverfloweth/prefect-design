@@ -1,4 +1,4 @@
-import { useMedia } from '@prefecthq/vue-compositions'
+import { useMedia } from '@stackoverfloweth/vue-compositions'
 import { reactive, Ref } from 'vue'
 
 function tryMatchMedia(media: string): Ref<boolean> | boolean {

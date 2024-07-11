@@ -7,7 +7,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { useIntersectionObserver } from '@prefecthq/vue-compositions'
+  import { useIntersectionObserver } from '@stackoverfloweth/vue-compositions'
   import { computed, onMounted, ref } from 'vue'
 
   const props = defineProps<{

@@ -18,7 +18,7 @@
 </script>
 
 <script lang="ts" setup>
-  import { useGlobalEventListener } from '@prefecthq/vue-compositions'
+  import { useGlobalEventListener } from '@stackoverfloweth/vue-compositions'
   import { ref, watch, computed, useAttrs } from 'vue'
   import { useMostVisiblePositionStyles } from '@/compositions/position'
   import { usePopOverGroup } from '@/compositions/usePopOverGroup'

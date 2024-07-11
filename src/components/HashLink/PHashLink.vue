@@ -6,7 +6,6 @@
 
 <script lang="ts" setup>
   import { computed } from 'vue'
-  import { useRouter } from 'vue-router'
   import { kebabCase } from '@/utilities'
 
   const props = defineProps<{
@@ -14,7 +13,9 @@
     hash?: string,
   }>()
 
-  const router = useRouter()
+  const emit = defineEmits<{
+    go: [value: string | undefined],
+  }>()
 
   const kebabHash = computed(() => {
     return kebabCase(props.hash ?? '')
@@ -23,7 +24,7 @@
   function goToRoute(): void {
     const hash = props.hash ? `#${kebabHash.value}` : undefined
 
-    router.push({ hash })
+    emit('go', hash)
   }
 
   const component = computed(() => {

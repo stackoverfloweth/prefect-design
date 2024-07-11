@@ -15,7 +15,7 @@
 
 <script lang="ts" setup>
   import { useWizardStep } from '@/compositions/wizard'
-  import { useValidation } from '@prefecthq/vue-compositions'
+  import { useValidation } from '@stackoverfloweth/vue-compositions'
   import { computed } from 'vue'
 
   const props = defineProps<{

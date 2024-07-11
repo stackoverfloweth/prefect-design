@@ -41,7 +41,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { useElementRect, useKeyDown } from '@prefecthq/vue-compositions'
+  import { useElementRect, useKeyDown } from '@stackoverfloweth/vue-compositions'
   import { cva, type VariantProps } from 'class-variance-authority'
   import { addDays, addSeconds, isAfter, isBefore } from 'date-fns'
   import { secondsInDay } from 'date-fns/constants'
