@@ -1,14 +1,15 @@
 <template>
   <nav class="p-bread-crumbs">
     <template v-for="(crumb, index) in crumbs" :key="index">
-      <div class="p-bread-crumbs__crumb">
-        <component
-          :is="crumb.to ? 'router-link' : 'span'"
-          :class="classes.link(crumb)"
-          :to="crumb.to"
-        >
-          {{ crumb.text }}
-        </component>
+      <div class="p-bread-crumbs__crumb" :class="classes.link(crumb)">
+        <slot :name="kebabCase(crumb.text)">
+          <component
+            :is="crumb.to ? 'router-link' : 'span'"
+            :to="crumb.to"
+          >
+            {{ crumb.text }}
+          </component>
+        </slot>
       </div>
     </template>
   </nav>
@@ -17,6 +18,7 @@
 <script setup lang="ts">
   import { computed } from 'vue'
   import type { Crumb, BreadCrumbs } from '@/types'
+  import { kebabCase } from '@/utilities'
 
   defineProps<{
     crumbs: BreadCrumbs,
